@@ -1,0 +1,21 @@
+{
+  "name": "catolibot",
+  "version": "1.0.0",
+  "main": "inlikeKeyb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "netlify-lambda install",
+    "buildNetlify": "netlify-lambda build functions",
+    "devNetlify": "netlify-lambda serve functions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.54.0",
+    "rss-to-telegram": "^1.0.7",
+    "telegraf": "^4.4.2",
+    "netlify-lambda": "^1.6.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

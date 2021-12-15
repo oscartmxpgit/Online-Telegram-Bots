@@ -1,0 +1,94 @@
+https://api.telegram.org/bot1784481950:AAFhgGT3ebi80WNuv7sKmsgFuoxxo5ZvK2s/setWebhook?url=https://github.com/oscartmxpgit/CatholicTelegramBots/InlikeKeyb
+
+npm install telegraf
+
+
+// bot.js
+const { Telegraf } = require('telegraf'); // importing telegraf.js
+
+
+var bot = new Telegraf('1784481950:AAFhgGT3ebi80WNuv7sKmsgFuoxxo5ZvK2s') // We saved our bot token to the bot variable
+
+bot.start(ctx => ctx.reply(`
+   Hi, I'm a simple bot (please write /help)
+`))
+
+bot.help(ctx => ctx.reply(`
+   Hello, world!!!
+`))
+
+bot.launch();
+
+
+
+node FirstBot.js
+
+
+
+
+
+
+
+
+---------
+
+npm install --save node-telegram-bot-api
+
+npm install node-telegram-bot-api
+cmd admin!!
+
+
+
+Invite @RawDataBot to your group.
+Upon joining it will output a JSON file where your chat id will be located at message.chat.id.
+
+"message": {
+    "chat": {
+        "id": -210987654,
+        "title": ...,
+        "type": "group",
+        ...
+    }
+    ...
+}
+}
+
+Telegram Bot Raw, [11/23/2021 3:17 AM]
+{
+    "update_id": 815877306,
+    "message": {
+        "message_id": 1552,
+        "from": {
+            "id": 1494008267,
+            "is_bot": false,
+            "first_name": "K",
+            "username": "Oscartmxp"
+        },
+        "chat": {
+            "id": -1001586760794,
+            "title": "Trujillo Trujillo \ud83d\ude1c",
+            "type": "supergroup"
+        },
+        "date": 1637633764,
+        "new_chat_participant": {
+            "id": 211246197,
+            "is_bot": true,
+            "first_name": "Telegram Bot Raw",
+            "username": "RawDataBot"
+        },
+        "new_chat_member": {
+            "id": 211246197,
+            "is_bot": true,
+            "first_name": "Telegram Bot Raw",
+            "username": "RawDataBot"
+        },
+        "new_chat_members": [
+            {
+                "id": 211246197,
+                "is_bot": true,
+                "first_name": "Telegram Bot Raw",
+                "username": "RawDataBot"
+            }
+        ]
+    }
+}
