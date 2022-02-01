@@ -25,30 +25,24 @@ rssToTelegram({
   cron: nextFireTime, //cron sintaxis
   timezone: "CET", // your defined timezone
   // rss source
-  source: "https://rss.evangelizo.org/rss/v2/evangelizo_rss-sp.xml", // can be an async function or and array of objects
+  source: "https://feeds.feedburner.com/evangeliodeldia", // can be an async function or and array of objects
 
   preprocess: async (item) => {
     return item;
   },
   // define you own message template
   template:
-    '<a href="{{image}}"> </a> <b><a href="{{link}}">{{title}}</a></b>\n {{description}}',
+    '<a href="{{image}}"> </a> <b><a href="{{link}}">{{title}}</a></b>\n {{channel}}',
   // filter news of the day, use this function to filter already published posts
-  filter: async ({ guid }) => { // async functtion
-    var dia=parseInt( guid.substr(8, 2),10);
-    var mes=parseInt( guid.substr(5, 2),10);
-    var anyo=guid.substr(0, 4);
-
+  filter: async ({ date }) => { // async functtion
     // must be async
     const d = new Date();
-
     return (
-      dia == d.getDate() &&
-      mes == d.getMonth() + 1 &&
-      anyo == d.getFullYear()
+      date.getDate() === d.getDate() &&
+      date.getMonth() === d.getMonth() &&
+      date.getFullYear() === d.getFullYear()
     );
   },
   // add extra common fields to all items,
 
 });
-

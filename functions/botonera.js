@@ -5,8 +5,9 @@ const bot = new TelegramBot('1784481950:AAFhgGT3ebi80WNuv7sKmsgFuoxxo5ZvK2s')
 var chatId = '@conocetufe';
 
     bot.sendMessage(chatId,
-        'Si te interesa '+
-        'promocionar tu canal, <i>Escribe a @Oscartmxp</i>. ',
+        'Bienvenido, \n '+
+         'Escribe a @oscartmxp para colaborar en este proyecto \n'+
+         'Recuerda <i>compartir 🙂</i>.\n',
         {
             reply_markup:{
                 inline_keyboard:[
@@ -21,8 +22,10 @@ var chatId = '@conocetufe';
                  [{text:"🤓 Recursos", url:"https://t.me/materialesparacatequesis"},
                   {text:"🗯 Debates", url:"https://t.me/debatesdefe"}],
                     //fila 5
-                 //[{text:"Biblia de Jerusalén", url:""},
-                 //{text:"Debates", url:""},],
+                 [{text:"🤖 ChatBot", url:"https://t.me/biblia_de_jerusalen_bot"},
+                  {text:"😇 SantoralBot", url:"https://t.me/DataFromGSheetsbot"}],
+                    //fila 6
+                  [{text:"📖 Biblia de Jerusalén (bot)", url:"https://t.me/BibliaJerBot"},],
                 ]
             },
             parse_mode:"HTML",
